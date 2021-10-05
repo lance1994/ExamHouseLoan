@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+    <title>Hoegh: House Payback Plan</title>
+</head>
+<body>
+    <div class="header parent">
+        <h1>Hoegh: House Payback Plan</h1>
+    </div>
+
+    <div class="carousel parent">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img th:src="@{/img/img-4.jpg}">
+            </div>
+            
+            <div class="mySlides fade">
+                <img th:src="@{/img/img-2.jpg}" >
+            </div>
+            
+            <div class="mySlides fade">
+                <img th:src="@{/img/img-1.jpg}" >
+            </div>
+
+            <div class="mySlides fade">
+                <img th:src="@{/img/img-3.jpg}" >
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br/>
+    </div>
+
+    <div class="loan parent">
+        <h1>Loan Details</h1>
+        <form class="loanForm" action="#" th:action="@{/result}" th:object="${houseLoan}" method="post" required>
+            <p>Loan Amount: <input id="loanAmt" class="get" type="text" th:field="*{loanAmt}" min="1" step=".01" onBlur="formatAmt()" required/></p>
+            <p><span class="error" id="errorname"></span></p>
+            <p>Years of Payment: <input class="get" type="number" th:field="*{term}" min="1" max="30" step=".1" required/></p>
+            <p>Scheme: <input class="get" type="text" value="Monthly" readonly/></p>
+            <p>Interest Rate (%): <input class="get" type="number" th:field="*{intrRate}" step=".01" min=".01" required/></p>
+            <br/>
+            <p><input type="submit" value="Submit" class="sub"></p>
+            <p><input type="reset" value="Reset" class="sub"></p>
+        </form>
+    </div>
+
+    <script th:src="@{/js/carousel.js}"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+    <title>Hoegh: House Payback Plan</title>
+</head>
+<body onload="formatPayterm()">
+    <div class="parent">
+        <h1>Payment Terms</h1>
+        <div class="loanForm">
+            <table >
+                <tr>
+                    <th>Period</th>
+                    <th>Monthly Payment</th>
+                    <th>Interest</th>
+                    <th>Total Due</th>
+                    <th>Remaining Balance</th>
+                </tr>
+                <tr th:each="house : ${houseLoan}">
+                    <td th:text="${house.period}" class="amt"></td>
+                    <td th:text="${house.mthPay}" class="amt"></td>
+                    <td th:text="${house.intr}" class="amt"></td>
+                    <td th:text="${house.payment}" class="amt"></td>
+                    <td th:text="${house.loanAmt}" class="amt"></td>
+                </tr>
+            </table>
+            <br/>
+            <a class="recalc" href="/houseloan">Calculate another</a>
+        </div>
+    </div>
+    <script th:src="@{/js/carousel.js}"></script>
+</body>
+</html>

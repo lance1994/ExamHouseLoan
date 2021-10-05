@@ -1,0 +1,187 @@
+body{
+    font-family: Century Gothic;
+    margin: 0px;
+    padding: 0px;
+}
+
+.header{
+    top: 0px;
+    font-weight: bold;
+    text-shadow: 3px 3px 5px rgba(255, 255, 255, 1);
+}
+
+h1{
+    font-family: Ink Free;
+}
+
+input{
+    width: 90%;
+    padding: 10px;
+    font-family: Century Gothic;
+    position: relative;
+    display: block;
+    margin : 0 auto;
+    outline: none;
+}
+
+.get{
+    border: none;
+    border-bottom: 2px solid rgb(252, 166, 86);
+    text-align: center;
+    font-size: 16px;
+}
+
+.get:hover{
+    box-shadow: 0px 0px 5px rgb(252, 166, 86, .6);
+}
+
+.error{
+    font-style: italic;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.sub{
+    border-radius: 5px;
+    border: 3px solid rgb(72, 124, 192, .6);
+    background-color: rgb(72, 124, 192, .8);
+    font-weight: bold;
+}
+
+.sub:hover{
+    border: 3px solid rgb(252, 166, 86, .6);
+    background-color: rgb(252, 166, 86, .8);
+    box-shadow: 0px 0px 10px rgb(252, 166, 86, .6);
+}
+
+.parent{
+    padding-left: 5%;  
+    padding-right: 5%;
+}
+
+.loan{
+    padding-bottom: 100px;
+}
+
+.loanForm{
+    border-radius: 25px;
+    border: 5px solid rgb(72, 124, 192, .8);
+    padding: 30px;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+}
+
+th{
+    font-weight: bold;
+    border: rgb(252, 166, 86, .8);
+    padding: 5px;
+    background-color: rgb(252, 166, 86, .6);
+}
+
+td{
+    border: 1px solid black;
+    padding: 3px;
+    width: 20%;
+}
+
+tr:hover{
+    background-color: rgb(252, 166, 86, .3);
+    font-weight: bold;
+}
+
+.recalc{
+    width: 90%;
+    border-radius: 5px;
+    border: 3px solid rgb(72, 124, 192, .8);
+    background-color: rgb(72, 124, 192, .8);
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+    margin : 0 auto;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.recalc:hover{
+    border: 3px solid rgb(252, 166, 86, .6);
+    background-color: rgb(252, 166, 86, .8);
+    box-shadow: 0px 0px 10px rgb(252, 166, 86, .6);
+}
+
+.carousel{
+    background-color: rgb(72, 124, 192, .8);
+    margin-top: -40px;
+    padding-top: 40px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.slideshow-container {
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+img{
+    width: 100%;
+}
+  
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(184, 181, 181, 0.8);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+  
+.fade {
+    -webkit-animation-name: fade;
+    animation-name: fade;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: .1}
+    to {opacity: 1}
+  }
+  
+@keyframes fade {
+    from {opacity: .1}
+    to {opacity: 1}
+}
+
+@media(min-width: 900px){
+    .parent{
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .carousel{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+}
