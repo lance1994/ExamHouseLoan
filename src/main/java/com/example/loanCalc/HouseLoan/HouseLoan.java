@@ -19,7 +19,6 @@ public class HouseLoan implements Serializable{
     }
 
     public void setLoanAmt(String loanAmt){
-        System.out.println("SETTING CONT");
         loanAmt = loanAmt.replace(",", "");
         this.loanAmt = Float.parseFloat(loanAmt);
     }
